@@ -75,7 +75,6 @@ and 4 dimentional tables, each with a primary key that is being referenced from 
 
 ## Project structure
 
-
 1. **data**  JSON data lives here.
 2. **sql_queries.py** Pythpn script that contains SQL queries .
 3. **create_tables.py** Python script to drop and recreate tables .This is run first before you run the ETL script
@@ -101,7 +100,7 @@ python create_tables.py
 
 4. Write the etl.ipynb Jupyter Notebook to create the blueprint for ETL pipeline to insert data from JSON logs to postgres database.
 
-5. Write the ET scriptand run the etl in console, and verify results by running the test.ipynb Jupyter Notebook.
+5. Write the ETL script and run the etl in console, and verify results by running the test.ipynb Jupyter Notebook.
  ```
 python etl.py
 ```
