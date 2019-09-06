@@ -88,23 +88,26 @@ and 4 dimentional tables, each with a primary key that is being referenced from 
 
 1. Write all the create,drop and select queries sql_queries.py
 
-![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataModelling/Postgresql-Modelling_and_ETL/screenshots/screenshot1.png)
-
 2. Run create_table script in console
  ```
 python create_tables.py
 ```
 
+![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataModelling/Postgresql-Modelling_and_ETL/screenshots/screenshot1.png)
+
 3. Run test.ipynb Jupyter Notebook to verify that all the tables from step 2 were created properly.
+
+![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataModelling/Postgresql-Modelling_and_ETL/screenshots/screenshot2.png)
 
 4. Write the etl.ipynb Jupyter Notebook to create the blueprint for ETL pipeline to insert data from JSON logs to postgres database.
 
-5. Write the ETL
-
-6. Run the etl in script console, and verify results by running the test.ipynb Jupyter Notebook.
+5. Write the ET scriptand run the etl in console, and verify results by running the test.ipynb Jupyter Notebook.
  ```
 python etl.py
 ```
+![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataModelling/Postgresql-Modelling_and_ETL/screenshots/screenshot3.png)
+
+![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataModelling/Postgresql-Modelling_and_ETL/screenshots/screenshot4.png)
 
 
 
