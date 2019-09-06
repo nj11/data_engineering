@@ -88,6 +88,8 @@ and 4 dimentional tables, each with a primary key that is being referenced from 
 
 1. Write all the create,drop and select queries sql_queries.py
 
+![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataModelling/Postgresql-Modelling_and_ETL/screenshots/screenshot1.png)
+
 2. Run create_table script in console
  ```
 python create_tables.py
