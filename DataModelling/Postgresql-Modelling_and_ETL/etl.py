@@ -6,7 +6,7 @@ from sql_queries import *
 
 
 def process_song_file(cur, filepath):
-     """Reads songs JSON log file row by row, parses appropriate field data and inserts data into song and artist tables.
+    """Reads songs JSON log file row by row, parses appropriate field data and inserts data into song and artist tables.
         Parameters:
             cur (psycopg2.cursor()): Cursor of the sparkifydb database
             filepath (str): Filepath of the file to be processed
@@ -76,7 +76,7 @@ def process_log_file(cur, filepath):
         
         
 def process_data(cur, conn, filepath, func):
-     """Walks through all files nested under filepath, and processes all logs found.
+    """Walks through all files nested under filepath, and processes all logs found.
     Parameters:
         cur (psycopg2.cursor()): Cursor of the sparkifydb database
         conn (psycopg2.connect()): Connectio to the sparkifycdb database
@@ -105,7 +105,7 @@ def process_data(cur, conn, filepath, func):
 
 
 def main():
-     """Function used to extract, transform all data from song and user activity logs and load it into a PostgreSQL DB
+    """Function used to extract, transform all data from song and user activity logs and load it into a PostgreSQL DB
         Usage: python etl.py
     """
     conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=student password=student")

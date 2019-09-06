@@ -32,14 +32,14 @@ def drop_tables(cur, conn):
 
 
 def create_tables(cur, conn):
-     """Create tables defined on the sql_queries script: [songplays, users, songs, artists, time]"""
+    """Create tables defined on the sql_queries script: [songplays, users, songs, artists, time]"""
     for query in create_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def main():
-      """ Main method to recreate the databases and associated tables for sparkify app """
+    """ Main method to recreate the databases and associated tables for sparkify app """
     cur, conn = create_database()
     
     drop_tables(cur, conn)
