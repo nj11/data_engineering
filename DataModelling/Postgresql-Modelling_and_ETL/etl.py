@@ -6,6 +6,11 @@ from sql_queries import *
 
 
 def process_song_file(cur, filepath):
+     """Reads songs JSON log file row by row, parses appropriate field data and inserts data into song and artist tables.
+        Parameters:
+            cur (psycopg2.cursor()): Cursor of the sparkifydb database
+            filepath (str): Filepath of the file to be processed
+    """
     # open song file
     df=pd.read_json(filepath, lines=True)
     artist_id, artist_latitude, artist_location, artist_longitude, artist_name, duration, num_songs, song_id, title, year =         df.values[0]
@@ -21,6 +26,13 @@ def process_song_file(cur, filepath):
     
 
 def process_log_file(cur, filepath):
+    """Reads user activity JSON log file row by row, filters by NexSong, selects the needed fields, transforms them and inserts
+    them into time, user and songplay tables.
+            Parameters:
+                cur (psycopg2.cursor()): Cursor of the sparkifydb database
+                filepath (str): Filepath of the file to be analyzed
+    """
+        
     # open log file
     df=pd.read_json(filepath, lines=True)
 
@@ -64,6 +76,16 @@ def process_log_file(cur, filepath):
         
         
 def process_data(cur, conn, filepath, func):
+     """Walks through all files nested under filepath, and processes all logs found.
+    Parameters:
+        cur (psycopg2.cursor()): Cursor of the sparkifydb database
+        conn (psycopg2.connect()): Connectio to the sparkifycdb database
+        filepath (str): Filepath parent of the logs to be analyzed
+        func (python function): Function to be used to process each log
+    Returns:
+        Name of files processed
+    """
+        
     # get all files matching extension from directory
     all_files = []
     for root, dirs, files in os.walk(filepath):
@@ -83,6 +105,9 @@ def process_data(cur, conn, filepath, func):
 
 
 def main():
+     """Function used to extract, transform all data from song and user activity logs and load it into a PostgreSQL DB
+        Usage: python etl.py
+    """
     conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=student password=student")
     cur = conn.cursor()
 
