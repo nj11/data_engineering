@@ -86,23 +86,24 @@ and 4 dimentional tables, each with a primary key that is being referenced from 
 
 ### Steps implemented to finish this project.
 
-1 Write all the create,drop and select queries sql_queries.py
+1. Write all the create,drop and select queries sql_queries.py
 
-2 Run create_table script in console
+2. Run create_table script in console
  ```
 python create_tables.py
 ```
 
-3 Run test.ipynb Jupyter Notebook to verify that all the tables from step 2 were created properly.
+3. Run test.ipynb Jupyter Notebook to verify that all the tables from step 2 were created properly.
 
-4 Write the etl.ipynb Jupyter Notebook to create the blueprint for ETL pipeline to insert data from JSON logs to postgres database.
+4. Write the etl.ipynb Jupyter Notebook to create the blueprint for ETL pipeline to insert data from JSON logs to postgres database.
 
-5 Write the ETL
+5. Write the ETL
 
-6º Run the etl in script console, and verify results by running the test.ipynb Jupyter Notebook.
+6. Run the etl in script console, and verify results by running the test.ipynb Jupyter Notebook.
  ```
 python etl.py
 ```
+
 
 
 
