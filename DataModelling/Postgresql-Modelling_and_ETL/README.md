@@ -35,7 +35,7 @@ and 4 dimentional tables, each with a primary key that is being referenced from 
         level text - user level ( Free or paid)
         song_id text  - ID of the song being played
         artist_id text - Artist ID of the song played
-        session_id text - user session id
+        session_id int - user session id
         location text -- user location
         user_agent text - user agent used for the sparkify platform
         
