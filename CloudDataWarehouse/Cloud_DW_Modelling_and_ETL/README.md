@@ -13,11 +13,11 @@ Log data json path: s3://udacity-dend/log_json_path.json
 
 ## Database Modelling
 
-**Staging Tables
+**Staging Tables **
 
 ![Alt desc](https://github.com/nj11/data_engineering/blob/master/CloudDataWarehouse/Cloud_DW_Modelling_and_ETL/screenshots/staging_tables.png)
 
-**Analytics Tables
+**Analytics Tables **
 
 ![Alt desc](https://github.com/nj11/data_engineering/blob/master/CloudDataWarehouse/Cloud_DW_Modelling_and_ETL/screenshots/analytics_tables.png)
 
@@ -35,7 +35,7 @@ Log data json path: s3://udacity-dend/log_json_path.json
 
 ### To run the project.
 
- **Run  the below steps in exact same order.
+ **Run  the below steps in exact same order.**
  
 ```python create_redshift_cluster.py ```
 
