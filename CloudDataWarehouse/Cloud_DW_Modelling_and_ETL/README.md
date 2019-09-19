@@ -13,11 +13,11 @@ Log data json path: s3://udacity-dend/log_json_path.json
 
 ## Database Modelling
 
-**Staging Tables **
+**Staging Tables**
 
 ![Alt desc](https://github.com/nj11/data_engineering/blob/master/CloudDataWarehouse/Cloud_DW_Modelling_and_ETL/screenshots/staging_tables.png)
 
-**Analytics Tables **
+**Analytics Tables**
 
 ![Alt desc](https://github.com/nj11/data_engineering/blob/master/CloudDataWarehouse/Cloud_DW_Modelling_and_ETL/screenshots/analytics_tables.png)
 
@@ -30,7 +30,7 @@ Log data json path: s3://udacity-dend/log_json_path.json
 5. **etl.py** Python script contains ETL code to transfer data from s3 to staging tables and then from staging to analytics tables in redshift
 6. **read_s3data.py** Python script contains code to demonstrate reading S3 data using python AWS SDK libraries
 7. **dwh.cfg** Configuration parameters for project are defined here
-8. **Validate_etl_run_ipynb ** Notebook that tests ETL ran successfully by querying the analytics tables.
+8. **Validate_etl_run_ipynb** Notebook that tests ETL ran successfully by querying the analytics tables.
 9. **README.md** Documentation for the project.
 
 ### To run the project.
