@@ -29,13 +29,13 @@ Log data json path: s3://udacity-dend/log_json_path.json
 4. **sql_queries.py** Python script that contains all SQL queries used by create_tables.py
 5. **etl.py** Python script contains ETL code to transfer data from s3 to staging tables and then from staging to analytics tables in redshift
 6. **read_s3data.py** Python script contains code to demonstrate reading S3 data using python AWS SDK libraries
-7. **dwh.cfg ** Configuration parameters for project are defined here
+7. **dwh.cfg** Configuration parameters for project are defined here
 8. **Validate_etl_run_ipynb ** Notebook that tests ETL ran successfully by querying the analytics tables.
-9.**README.md** Documentation for the project.
+9. **README.md** Documentation for the project.
 
 ### To run the project.
 
- **Run  the below steps in exact same order.**
+ **Run  the below steps in exact same order**
  
 ```python create_redshift_cluster.py ```
 
