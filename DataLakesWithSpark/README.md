@@ -8,7 +8,7 @@ data back to S3 in parquest file format with the appropriate partitions.
 
 ## Instructions to run ETL
 
-**In the template configuration file `dl.cfg` add the following information:
+**In the template configuration file `dl.cfg` add the following information:**
 
 ```
 [AWS]
