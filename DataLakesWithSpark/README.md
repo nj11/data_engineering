@@ -12,10 +12,10 @@ data back to S3 in parquest file format with the appropriate partitions.
 
 ```
 [AWS]
-AWS_ACCESS_KEY_ID=<replace with your AWS access key ID>
-AWS_SECRET_ACCESS_KEY=<replace with your secret AWS access key>
-INPUT_DATA   = <replace with your S3 input directory location>
-OUTPUT_DATA     = <replace with your S3 output directory location>
+AWS_ACCESS_KEY_ID       =<replace with your AWS access key ID>
+AWS_SECRET_ACCESS_KEY   =<replace with your secret AWS access key>
+INPUT_DATA              =<replace with your S3 input directory location>
+OUTPUT_DATA             =<replace with your S3 output directory location>
 ```
 
 Run the following command to trigger the ETL:
