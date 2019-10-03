@@ -95,39 +95,36 @@ and 4 dimentional tables, each with a primary key that is being referenced from 
 
 ### Steps implemented to run this project.
 
- 1. Create  a redshift cluster in AWS console.
+1. Create  a redshift cluster in AWS console.
 
- 2. Download AWS credentials ( secret key and password ) in AWS console.
+2. Download AWS credentials ( secret key and password ) in AWS console.
 
- 3.Start the airflow web server.
+3.Start the airflow web server.
 
- 4.Create a connection in Apache Airflow UI named aws_credentials
+4.Create a connection in Apache Airflow UI named aws_credentials
 
-![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataModelling/Postgresql-Modelling_and_ETL/screenshots/aws_connection.png)
+![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataPipelines_WithAirflow/screenshots/aws_connection.png)
 
+5.Create a connection in Apache Aifflow UI named redshift
 
- 5.Create a connection in Apache Aifflow UI named redshift
+![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataPipelines_WithAirflow/screenshots/redshift_connection.png)
 
-
-![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataModelling/Postgresql-Modelling_and_ETL/screenshots/redshift_connection.png)
-
-
- 6.Write and run the  SQL airflow/create_tables.sql  to create the necessary tables in redshift
+6.Write and run the  SQL airflow/create_tables.sql  to create the necessary tables in redshift
 
 
- 7.Implement the ETL pipeline using reusable operators to load data from s3 to staging tables in redshift ( stage_redshift.py),
+7.Implement the ETL pipeline using reusable operators to load data from s3 to staging tables in redshift ( stage_redshift.py),
   from staging to the fact tables(load_fact.py), from fact to the dimension tables(load_dimension.py) and finally to perform the quality   checks after ETL ( data_quality.py)
   
  
- 8.Implement the main ETL under the airflow/dags/redshift_load.py directory using these operators ( Step 7).Make sure the dependencies     between all the steps works as expected.
+8.Implement the main ETL under the airflow/dags/redshift_load.py directory using these operators ( Step 7).Make sure the dependencies     between all the steps works as expected.
 
   
-  ![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataModelling/Postgresql-Modelling_and_ETL/screenshots/redshift_connection.png)
+  ![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataPipelines_WithAirflow/screenshots/dag_graph2.png)
 
 
  9.Test the ETL run on Apache Airflow to make sure all tasks completed successfully.If tasks fail check Airflow logs for details.
 
-![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataModelling/Postgresql-Modelling_and_ETL/screenshots/dag_run.png)
+![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataPipelines_WithAirflow/screenshots/dag_run.png)
 
 
 
