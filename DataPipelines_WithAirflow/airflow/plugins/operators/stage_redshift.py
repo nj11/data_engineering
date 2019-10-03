@@ -4,6 +4,7 @@ from airflow.models import BaseOperator
 from airflow.utils.decorators import apply_defaults
 
 class StageToRedshiftOperator(BaseOperator):
+    ''' Reusable operator to load data into DW from S3 using AWS COPY command '''
     ui_color = '#358140'
     copy_sql = """
         COPY {}
@@ -36,6 +37,7 @@ class StageToRedshiftOperator(BaseOperator):
         
         
     def execute(self, context):
+        ''' On run, connect to the AWS and redshift connections in airflow and run the copy command based on table and s3 parameters passed'''
         aws = AwsHook(self.aws_conn_id)
         credentials = aws.get_credentials()
         redshift = PostgresHook(postgres_conn_id=self.redshift_conn_id)
