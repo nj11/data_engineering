@@ -3,7 +3,7 @@ from airflow.models import BaseOperator
 from airflow.utils.decorators import apply_defaults
 
 class DataQualityOperator(BaseOperator):
-
+    ''' Reusable operator to perform data quality checks ( records exist) on tables passed '''
     ui_color = '#89DA59'
 
     @apply_defaults
@@ -17,6 +17,7 @@ class DataQualityOperator(BaseOperator):
         self.redshift_conn_id = redshift_conn_id
         
     def execute(self, context):
+        ''' On run, query all the tables to ensure records exist.If they don't then raise an exception '''
         redshift_hook = PostgresHook(self.redshift_conn_id)
         for table in self.tables:
             self.log.info(f"Data Quality check for {table} table")
