@@ -3,7 +3,7 @@ from airflow.models import BaseOperator
 from airflow.utils.decorators import apply_defaults
 
 class LoadFactOperator(BaseOperator):
-
+    ''' Reusable operator to load data into fact tables in data warehouse '''
     ui_color = '#F98866'
     insert_sql = """
         INSERT INTO {}
@@ -25,6 +25,7 @@ class LoadFactOperator(BaseOperator):
         
         
     def execute(self, context):
+        '''On run, delete fact table and reload data from insert SQL query and table name passed as an argument '''
         redshift = PostgresHook(postgres_conn_id=self.redshift_conn_id)
         redshift.run("DELETE FROM {}".format(self.table))
         self.log.info("Deleted table : {}".format(self.table))
