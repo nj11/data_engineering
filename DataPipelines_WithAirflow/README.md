@@ -101,6 +101,8 @@ and 4 dimentional tables, each with a primary key that is being referenced from 
 
 3.Start the airflow web server.
 
+![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataPipelines_WithAirflow/screenshots/airflow_start.png)
+
 4.Create a connection in Apache Airflow UI named aws_credentials
 
 ![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataPipelines_WithAirflow/screenshots/aws_connection.png)
