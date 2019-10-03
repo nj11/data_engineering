@@ -95,11 +95,11 @@ and 4 dimentional tables, each with a primary key that is being referenced from 
 
 ### Steps implemented to run this project.
 
-1. Create  a redshift cluster in AWS console.
+ 1. Create  a redshift cluster in AWS console.
 
-2. Download AWS credentials ( secret key and password ) in AWS console.
+ 2. Download AWS credentials ( secret key and password ) in AWS console.
 
-3.Start the airflow web server.
+ 3.Start the airflow web server.
 
  4.Create a connection in Apache Airflow UI named aws_credentials
 
@@ -125,7 +125,7 @@ and 4 dimentional tables, each with a primary key that is being referenced from 
   ![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataModelling/Postgresql-Modelling_and_ETL/screenshots/redshift_connection.png)
 
 
-  9.Test the ETL run on Apache Airflow to make sure all tasks completed successfully.If tasks fail check Airflow logs for details.
+ 9.Test the ETL run on Apache Airflow to make sure all tasks completed successfully.If tasks fail check Airflow logs for details.
 
 ![Alt desc](https://github.com/nj11/data_engineering/blob/master/DataModelling/Postgresql-Modelling_and_ETL/screenshots/dag_run.png)
 
